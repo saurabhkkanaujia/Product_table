@@ -1,0 +1,13 @@
+#wrapper{
+    margin: 5% 20%;
+}
+#main{
+    line-height: 3;
+}
+#predict{
+    padding: 2% 5%;
+}
+.float_left{
+    float: left;
+    width: 45%;
+}
