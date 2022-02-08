@@ -1,10 +1,12 @@
 var products = [];
-
+flag = -1;
 function addProduct(){
     var product = insertJson();
-    products.push(product);
-    console.log(products);
-    display(products);
+    if (flag == -1){
+        products.push(product);
+        console.log(products);
+        display(products);
+    }
 }
 
 function insertJson(){
@@ -14,6 +16,7 @@ function insertJson(){
     
     if (checkValues(p_id, p_name, p_price) && idValidate(p_id, products)){
         console.log(p_id,p_name,p_price, p_price);
+        flag = -1;
         return {
             'prod_id' : p_id,
             'prod_name' : p_name,
@@ -22,6 +25,7 @@ function insertJson(){
     }
     else{
         window.alert('Invalid Input or ID Already Taken');
+        flag = 1;
     }
     
     
