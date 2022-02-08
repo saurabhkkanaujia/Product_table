@@ -36,10 +36,8 @@ function idValidate(p_id, products){
     return true;
 }
 
-
-
 function checkValues(p_id, p_name, p_price){
-    if (p_id == "" || p_name == "" || p_price == ""){
+    if (p_id == "" || p_name == "" || p_price == "" || isNaN(p_price)){
         return false;
     }
     else{
