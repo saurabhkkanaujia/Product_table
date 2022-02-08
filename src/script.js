@@ -39,6 +39,7 @@ function idValidate(p_id, products){
 
 
 function checkValues(p_id, p_name, p_price){
+    if (p_id == "" || p_name == "" || p_price == ""){
         return false;
     }
     else{
